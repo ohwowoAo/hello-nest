@@ -4,6 +4,7 @@ import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
+
 export default tseslint.config(
   {
     ignores: ['eslint.config.mjs'],
@@ -29,12 +30,21 @@ export default tseslint.config(
       '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/no-floating-promises': 'warn',
       '@typescript-eslint/no-unsafe-argument': 'warn',
+      '@typescript-eslint/no-unsafe-return': 'off',
       "prettier/prettier": [
         "error",
-        {
-          "endOfLine": "auto"
-        }
-      ]
+         {
+            endOfLine: 'auto',
+            semi: true,
+            singleQuote: true,
+            printWidth: 100,
+            tabWidth: 4,
+            useTabs: false,
+            trailingComma: 'all',
+            "arrowParens": "avoid"
+          },
+      ],
+      
     },
   },
 );
