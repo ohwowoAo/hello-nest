@@ -13,11 +13,6 @@ export class MoviesController {
         return this.moviesService.getAll();
     }
 
-    // @Get('search')
-    // search(@Query('year') searchingYear: string) {
-    //     return `${searchingYear}년도 영화 검색결과를 리턴할거야`;
-    // }
-
     @Get(':id')
     getOne(@Param('id') movieId: number): Movie {
         return this.moviesService.getOne(movieId);
