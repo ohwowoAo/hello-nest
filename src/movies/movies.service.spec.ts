@@ -73,7 +73,7 @@ describe('MoviesService', () => {
             const movie = service.getOne(1);
             expect(movie.title).toEqual('Updated Movie');
         });
-        it('should throw NEW notFouinf exception', () => {
+        it('should throw NEW notFound exception', () => {
             try {
                 service.deleteOne(999);
             } catch (e) {
